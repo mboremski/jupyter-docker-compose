@@ -6,5 +6,11 @@ services:
       dockerfile: ./docker/jupyter/Dockerfile
     ports:
       - 8888:8888
+    labels:
+      - homepage.group=Synology-NAS
+      - homepage.name=Jupyter Notebook
+      - homepage.icon=Jupyter
+      - homepage.href=https://synas:8888/
+      - homepage.description=Jupyter Notebook
     container_name: jupyter_notebook
     command: "start-notebook.sh --NotebookApp.token="
